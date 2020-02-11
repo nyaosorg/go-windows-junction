@@ -3,8 +3,8 @@
 package main
 
 import (
-	"os"
 	"errors"
+	"os"
 
 	"github.com/zetamatta/go-windows-junction"
 )
