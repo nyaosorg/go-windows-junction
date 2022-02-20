@@ -10,7 +10,7 @@ import (
     "os"
     "errors"
 
-    "github.com/zetamatta/go-windows-junction"
+    "github.com/nyaosorg/go-windows-junction"
 )
 
 func main1() error {
@@ -38,6 +38,6 @@ func main() {
 
 ```
 $ go run example.go ../nyagos nya
-nya  is linked to  C:\Users\hymko\go\src\github.com\zetamatta\nyagos
+nya  is linked to  C:\Users\hymko\go\src\github.com\nyaosorg\nyagos
 ```
 
