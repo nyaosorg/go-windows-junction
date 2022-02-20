@@ -6,7 +6,7 @@ import (
 	"errors"
 	"os"
 
-	"github.com/zetamatta/go-windows-junction"
+	"github.com/nyaosorg/go-windows-junction"
 )
 
 func main1() error {
