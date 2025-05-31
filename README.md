@@ -1,6 +1,9 @@
 go-windows-junction
 ===================
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/nyaosorg/go-windows-junction.svg)](https://pkg.go.dev/github.com/nyaosorg/go-windows-junction)
+[![Go Test](https://github.com/nyaosorg/go-windows-junction/actions/workflows/go.yml/badge.svg)](https://github.com/nyaosorg/go-windows-junction/actions/workflows/go.yml)
+
 A Go package to create [junction points](https://docs.microsoft.com/en-us/windows/win32/fileio/hard-links-and-junctions) on Windows.
 
 - On **Windows**, it creates a junction point using native system calls.
