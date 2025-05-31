@@ -1,7 +1,25 @@
 go-windows-junction
 ===================
 
-Create junctions on Windows.
+A Go package to create [junction points](https://docs.microsoft.com/en-us/windows/win32/fileio/hard-links-and-junctions) on Windows.
+
+- On **Windows**, it creates a junction point using native system calls.
+- On **non-Windows** platforms (Linux, macOS), it falls back to `os.Symlink`.
+
+Junctions are similar to symbolic links but have certain limitations:
+- They can only point to directories.
+- They do not require elevated privileges (unlike symlinks on some versions of Windows).
+- The link target can be read using `os.Readlink`.
+
+This package is useful when writing cross-platform code that creates directory links, and you want consistent behavior on Windows without requiring admin rights.
+
+## Installation
+
+```sh
+go get github.com/nyaosorg/go-windows-junction
+````
+
+## Usage Example
 
 ```go
 package main
@@ -36,8 +54,17 @@ func main() {
 }
 ```
 
+### Output Example
+
 ```
 $ go run example.go ../nyagos nya
 nya  is linked to  C:\Users\hymko\go\src\github.com\nyaosorg\nyagos
 ```
 
+## Author
+
+[hymkor (HAYAMA Kaoru)](https://github.com/hymkor)
+
+## License
+
+MIT License
